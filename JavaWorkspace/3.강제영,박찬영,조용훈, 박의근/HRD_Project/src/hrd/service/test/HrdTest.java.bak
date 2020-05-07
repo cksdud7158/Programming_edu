@@ -1,0 +1,30 @@
+package hrd.service.test;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import hrd.student.vo.Student;
+import hrd.vo.Attendance;
+
+public class HrdTest {
+
+	public static void main(String[] args) {
+		ArrayList<Student> st = new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
+		
+	
+		System.out.println("=============add=========");
+		System.out.println("id(String) : ");
+		String id = sc.next();
+		
+		System.out.println("name(String) : ");
+		String name = sc.next();
+		
+		Student sts = new Student(id, name);
+		st.add(sts);
+		
+		System.out.println(st.get(0));
+	
+		
+	}
+
+}

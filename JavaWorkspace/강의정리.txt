@@ -1,0 +1,345 @@
+예정 커리큘럼
+1. Java Programming - JDBC(MySQL) - Front UI(HTML5,CSS3,JavaScript) 
+- Web programming(Servlet, WAS, Design Pattern) - Ajax - Framework(MyBatis, Spring MVC)/Maven,SpringBoot
+- Restful API(PostMan, Sweager) - Vue(CLI, SPC,VSCode)
+Maven Spring Framework + SpringBoot API = Cross Domain
+BigData + AI + ELASTICSearch
+
+20.04.06
+
+\\192.168.0.33
+
+jdk => Java development kit
+
+클라이언트 사이드와 서버 사이드가 존재
+J2SE
+=> 클라이언트 사이드만 존재하면 됨, 로컬에서 작동
+J2EE
+=> 웹과 서버 사이드가 둘다 존재해야함
+J2ME가 존재(모바일 버전) 하지만 안드로이드 등장으로 사라짐
+
+jre
+=> JAVA  runtime environment, 미리 만들어놓은 API(라이브러리)환경
+=> 기계어로 존재
+
+확장자가 JAVA라는 것은 원시소스코드(인간이 보는 언어)
+기계어 .class file 실행파일
+
+JRE에 기계어로 존재하는 rt.jar 이것을 원시소스코드로 모아둔것이 src.zip
+이에 대한 설명을 모아둔것이 API Documents
+
+IDE = Integrated Development Environment(통합개발환경)
+이클립스 에디터의 장점은 플러그인 기술이 좋음
+
+src = source => 프로그램만 들어감 
+--------------------------------------------------------------------------------------------------------------------
+20.04.07
+
+자바 기본적인 문법(변수와 조건문) 
+
+
+Package 이름 지정할 시 전부 소문자로 지정
+.을 통해 degree 구분 
+// , /*(멀티라인 코멘트)
+프로그램 = 서로다른 입력값을 받아 그에 맞는 출력을 내보내줌
+
+이클립스에 저장 시 Java syntax에 class file(실행 파일) 컴파일 진행 
+
+JVM이 실행시 Class File에 main이 있는지 확인, 그 다음 라인부터 실행 
+
+Java 폴더 아래 bin 아래 javac.exe 가 컴파일 실행, run 시 java.exe 실행
+
+Garbage Collection = Thread -> JVM의 Heap 영역을 주기적으로 자동으로 정리해줌, 우선순위가 1이지만 쌓이게 되면 자동적으로 정리  
+Thread 우선 순위가 1~10까지 존재, 10이 제일 중요 
+
+***GitLab 회원가입해두기(이름 한글로 풀네임 쓰기)
+
+Data Type
+기본형(Primitive Data Type), 소문자 
+1. 숫자형
+	- 정수 byte(8bit) < short(16bit) < int(32bit) < long(64bit)
+	- 실수 float(32bit) < double(64bit)
+		double salary = 4500000.0; (float 아님)
+		float salary = 4500000.0F; (float 아님)
+2. 문자형 - char(16bit)(한 문자를 나타내는 데이타 타입) 'a', 'A', '나'-> 8bit
+3. 논리형 - boolean(true/false)
+
+참조형(Class Data Type), 첫글자 대문자
+
+ctrl + shift + O = 자동으로 필요한 파일 import 해줌
+
+field는 값을 가짐 -> 묵시적 초기화 진행됨 
+정수 = 0 
+실수 = 0.0
+문자 = '\u0000'
+논리형 = false
+Class Data Type = null
+
+--------------------------------------------------------------------------------------------------------------------
+20.04.08
+
+Object(객체)의 기능,특징을 나타낼 수 있는 Class를 만들었다.
+instance = 메모리에 올라가서 사용할 수 있는 값이 올라간 객체 
+
+생성자 -> Method에서 set의 역할과 같은 역할을 할 수 있다. 
+
+Encore en = new Encore()
+여기서 en 은 Heap에 올라가있는 Encore()의 주소값을 갖고있다. 
+Class = Type -> 어떤 타입으로 만들지 클래스로 정한다. 
+
+Ex)
+세가지 종류의 티셔츠가 있다. 라운드티, 점퍼티, 반팔티 
+shirt -> 이게 타입 
+LongSleeved :boolean
+BrandName : String
+color : char
+
+Shirt 라운드티 = new Shirt()    -> 이 작업이 instance
+Shirt 점퍼티 = new Shirt()
+Shirt 반팔티 = new Shirt()
+		 -------
+		 생성자
+Method 첫글자는 소문자 생성자는 대문자
+Constructor(생성자) = 객체가 생성될 때마다 호출되는 것 -> 객체마다 각각의 특성을 갖고 있기 때문에 생성될때마다 호출
+명시적 생성자가 하는일은 Field Initialization
+클래스에 아무런 생성자가 없다면 컴파일러가 기본 생성자는 넣어준다. 
+컴파일러가 하는 일은 타입체크(문법체크) 
+
+클래스를 만들었을 때 필드를 추출한 후 값을 주입 
+값을 주입하는 통로는 setter(), 생성자 두가지 존재 
+
+Encapsulation -> 다른 클래스에서 원래 클래스의 데이터에 접근할 수 없도록 방지 
+필드 앞에 public 와 private 를 붙이는데
+public는 다른 클래스에서도 데이터 접근 가능
+private는 같은 클래스에서만 데이터 접근 가능 
+따라서 main 클래스에서 다른 클래스의 데이터를 변경시 setMethod를 사용하여 변경한다.
+왜냐하면 Method에서 조건을 붙여 데이터를 분별할 수 있기 때문
+따라서 앞으로 Class를 만들시 필드는 private로 지정
+
+--------------------------------------------------------------------------------------------------------------------
+20.04.09
+
+Array 
+- 같은 데이타 타입을 가지는 서로다른 값들이 하나의 변수를 처리되는것
+- 클래스가 존재하지않는다.
+- 위치값을 찾으려면 length를 사용
+
+FQCN = Full Qualafied Class Name -> 패키지명을 포함한 클래스 전체 이름
+
+--------------------------------------------------------------------------------------------------------------------
+20.04.10
+
+배열에서 타입을 넣는거에 대해서 한다. 
+생각하는것을 프로그래밍화한다. 
+얼마나 많이 생각하고 실패했는지 중요하다.
+프로그래밍할 때 많은 실패를 한다고 아무런 리스크가 발생하지않는다.
+
+객체(instance) 는 DB의 행에 1대1 매핑됨
+field 는 DB의 열 과 매핑됨
+
+
+1.Product 타입 배열 생성
+Product pros = new Product[3];
+2.배열 각각의 항목에 객체를 초기화 선언
+pros[0] = new Product(*,*,*)
+pros[1] = new Product(*,*,*)
+pros[2] = new Product(*,*,*)
+
+기본형 타입의 배열에는 값이 바로들어가는 반면에 
+클래스 타입의 배열에는 값을 참조하는 주소가 들어간다. 
+
+--------------------------------------------------------------------------------------------------------------------
+20.04.27
+ 
+테이블에서의 기본키 조건 
+not null + unique
+
+mysql> show databases; // 데이타 베이스 목록확인
+mysql> create database scott; //데이타베이스 생성 
+mysql> use scott; // 스키마로 들어가기
+mysql> source C:\pcy\util\scott.sql // 테이블 받아오기 
+mysql> desc sctt;
+
+drop database scott; // 데이타베이스 삭제
+
+workbench에서 실행
+scott 스키마 선택 후 실해야함
+select * from emp;
+select * from dept;
+
+scott emp 에서
+EMPNO(사원번호) -> 기본값
+CLERK -> 사원
+MGR -> 상사의 사원 번호
+null -> 값임, 자격 없음, 미확정 
+COMM -> 커미션
+
+포렌키를 가지는 애가 자식이다.
+
+1) 사용자적 입장에서 기능을 검토.... Use Case Diagram
+2) 엔터티 추출.... DB Modeling 물리적인 테이블 생성(제약 관계)
+3) vo 작성
+4) DAO 작성
+	-> 싱글톤 | Interface
+	-> 공통적인 로직 | 가변적인 로직 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
