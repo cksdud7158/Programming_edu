@@ -139,7 +139,9 @@ public class CustomerDAOImpl implements CustomerDAO{
 		ResultSet rs= ps.executeQuery();
 		while(rs.next()) {
 			vo1= new Customer(rs.getString("id"), 
-					rs.getString("pass"));
+					rs.getString("pass"),
+					rs.getString("cust_name"),
+					rs.getString("address"));
 		}
 		closeAll(rs, ps, conn);
 		return vo1;

@@ -5,7 +5,9 @@ import java.sql.SQLException;
 import config.ServerInfo;
 import jdbc.dao.impl.CustomerDAOImpl;
 import jdbc.vo.Customer;
-
+/* 
+ * DB에 있는 데이타를 CRUD를 핸들링할 때 데이타의 존재 유무를 사전에 항상 확인해야함
+ */
 public class CustomerDAOTest {
 	// static 초기화 블락
 	static {

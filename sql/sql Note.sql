@@ -451,19 +451,130 @@ select * from emp where empno not in (select ifnull(mgr,0) from emp);
 select * from cust;
 select * from cust where id='1' and pass= '1234';
 
+-- Join ----------------------------------------------------------------------------------------------
+select * from emp;
+select distinct deptno from emp;
+select * from dept;
 
+-- 특정 사원인 소속된 부서의 정보의 정보를 검색( 사원의 정보 + 부서의 정보)
+select * from emp, dept;
+/*
+Cartesian Product
+단순 데이타의 곱으로 결과를 산출하는 방식
+14*4 =56
+Cartesian Product가 도출되는 경우
+1) 조인 조건을 안줬거나
+2) 조인 조건을 잘못 줬거나 
 
+join 조건 부여하는 방법 
+1) where 절을 이용해서 각각 테이블에서의 공통의 컬럼을 명시한다. 
+2) whwere emp.deptno =dept.detno
 
+*/
+-- 1) 컬럼명을 일일이 명시해야한다. 불필요한 컬럼이 출력되는 것을 방지한다.
+select * from emp, dept where emp.deptno= dept.DEPTNO;
 
+-- 2) deptno 가 양쪽 테이블에 존재하기떄문에 어디에서 가져올지 정확히 명시해야한다. 
+-- 컬럼명 앞에 table alias를 부여한다.
+select empno, ename, sal, deptno, dname, loc 
+from emp, dept 
+where emp.deptno= dept.DEPTNO;
 
+-- 3) 컬럼명 앞에 테이블 명을 일일히 붙이는 것이 매우 번거로움
+select emp.empno, emp.ename, emp.sal, emp.deptno, dept.dname, dept.loc 
+from emp, dept 
+where emp.deptno= dept.DEPTNO;
 
+-- 4)
+select e.empno, e.ename, e.sal, e.deptno, d.dname, d.loc 
+from emp e, dept d  
+where e.deptno= d.DEPTNO;
 
+-- 사원의 이름, 급여, 부서번호, 부서명을 검색. 단 급여가 2000이상이고 30번 부서에 한해서만
+-- where 절에서 조인 조건과 함께 비조인 조건이 쓰인다. 
+select e.ename, e.sal, e.deptno, d.dname
+from emp e, dept d
+where e.deptno = d.deptno and e.sal>2000 and e.deptno=30;
 
+select empno, ename, mgr from emp where ename='blake'; -- e
+select empno,ename from emp where empno= 7839; -- m
 
+-- BLAKE 라는 사원의 상사의 이름을 검색.. 사원번호, 사원 이름, 상사번호 , 상사 이름 
+-- 특정 사원의 상사 이름을 검색 
+-- 1)
+select empno, enmae, mgr from emp; -- 해당사원의 상사번호를 검색 
+select empno, ename from emp; -- 위의 상사번호가 사원 번호인 사람의 이름을 검색 
 
+-- 2)
+select * from (select empno, ename, mgr from emp) e, (select empno, ename from emp) m
+where e.mgr = m.empno;
 
+-- 3)
+select * from (select empno, ename, mgr from emp where ename= 'blake') e, (select empno, ename from emp) m
+where e.mgr = m.empno;
 
+-- OUTER JOIN -----------------------------------------------
+/*
+ A,B 테이블을 조인할 경우, 조건에 맞지않는 데이타는 디스플레이 되지않는데 
+ 이 경우도 디스플레이 하고 싶을 때 outer join을 사용한다. 
+ 
+ OUTER JOIN 종류
+ 1) LEFT OuTER JOIN 2) RIGHT OUTER JOIN 3) FULL OUTER JOIN
+ (데이타가 어느쪽에 있는가에 따라서 종류의 이름이 정해짐 )
+ 
+*/
+-- 사원의 이름, 부서번호, 부서 이름 검색 
+select e.ename, e.deptno, d.dname from emp e, dept d where e.deptno= d.deptno ;
 
+-- 1) 위 경우에 right outer join을 사용
+-- 조인 수행시 우측테이블이 기준이 되어서 결과를 생산하도록 해준다. 
+
+select e.ename, e.deptno, d.dname 
+from emp e right outer join dept d on e.deptno= d.deptno ;
+-- left outer join을 사용
+select e.ename, e.deptno, d.dname 
+from emp e left outer join dept d on e.deptno= d.deptno ;
+
+-- 특정 사원의 상사 이름을 검색 ... 13줄 검색
+/*
+self 조인의 결과 king의 사원 정보가 빠져있다. 
+king의 상사번호는 null이기때문
+
+*/
+select concat(e.ename, '의 매니저는', m.ename,'입니다.') info
+from emp e right outer join emp m 
+on e.mgr = m.empno;
+
+select concat(e.ename, '의 매니저는', m.ename,'입니다.') info
+from emp e left outer join emp m 
+on e.mgr = m.empno;
+
+-- A 10,20, 30 full outer join  B 10, 20, 40 -- 10,20, 30, 40 도출됨 
+-- full outer join 이 실행되지않음으로 union 연산자를 mysql에서 사용해야 한다. 
+create table outer1(sawonid int);
+create table outer2(sawonid int);
+
+insert into outer1 value(10);
+insert into outer1 value(20);
+insert into outer1 value(40);
+
+insert into outer2 value(10);
+insert into outer2 value(20);
+insert into outer2 value(30);
+
+select * from outer1;
+select * from outer2;
+
+-- full outer join 
+select sawonid from outer1 union select sawonid from outer2;
+
+select * from customer;
+select * from stock;
+select * from shares;
+
+select 
+
+update customer set cust_name='박찬영', address= '사가정' where ssn='1234';
 
 
 
