@@ -13,6 +13,7 @@ public class DatabaseTest {
 		//db.addCustomer(new CustomerRec("1234", "아이유", "서초동"));
 		//db.deleteCustomer("1234");
 		//db.updateCustomer(new CustomerRec("1234-1234", "박찬영", "사가정"));
-		System.out.println(db.getPortfolio("1234"));
+		//System.out.println(db.getPortfolio("1234"));
+		System.out.println(db.getCustomer("1234"));
 	}
 }

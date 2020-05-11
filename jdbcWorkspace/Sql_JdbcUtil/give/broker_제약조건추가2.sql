@@ -5,12 +5,12 @@ create table customer
  
 create table stock
        (symbol varchar(20) primary key,
-       price DECIMAL(10,2) not null) ; 
+       price decimal(10,2) not null) ; 
  
 create table shares
        (ssn varchar(30) not null,
        symbol varchar(20) not null,
-       quantity INT(10) not null) ; 
+       quantity int(2) not null) ; 
  
 insert into stock ( symbol,price) values( 'SUNW', 68.75);
 insert into stock ( symbol,price) values( 'CyAs', 22.675);
@@ -31,7 +31,15 @@ insert into customer values( '111-116', 'Yufirst6', 'Seoul');
 insert into customer values( '111-117', 'Yufirst7', 'Seoul');
 insert into customer values( '111-118', 'Yufirst8', 'Seoul');
 insert into customer values( '111-119', 'Yufirst9', 'Seoul');
-commit;
+
+ALTER TABLE shares ADD CONSTRAINT fk_shares_ssn foreign key(ssn) references customer(ssn) ON DELETE CASCADE;
+ALTER TABLE shares ADD CONSTRAINT fk_shares_symbol foreign key(symbol) references stock(symbol) ON DELETE CASCADE;
+
+-- foreign key를 쓸 때 ON DELETE CASADE 옵션을 줄 것.
+-- 자식을 둔 부모가 삭제가 안 되면 자식을 먼저 죽이고 부모가 죽음.
+-- ON DELETE SET null 자식의 모든 값을 null로 바꾸고 부모가 죽음.
+
+
 
 
 

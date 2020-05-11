@@ -568,17 +568,24 @@ select * from outer2;
 -- full outer join 
 select sawonid from outer1 union select sawonid from outer2;
 
-select * from customer;
+select * from customer ;
 select * from stock;
-select * from shares;
+select * from shares, stock;
 
-select 
+insert into shares(ssn,symbol,quantity) values('1234','sunw',10);
+select * from shares where ssn='1234';
+
 
 update customer set cust_name='박찬영', address= '사가정' where ssn='1234';
 
+delete from shares where ssn='1234' and symbol= 'duke';
+insert into shares values('111-111', 'jdk', 300);
 
-
-
+-- 포렌키 넣는 방법
+alter table shares add constraint fk_shares_ssn foreign key(ssn) references customer(ssn);
+/* 포렌을 주지 않으면 일일이 다 삭제해야함 
+자식(포렌키를 가진)을 가진 부모의 경우 삭제가 되지않음
+따라서 자식을 먼저 삭제하고 부모를 삭제하면됨 or 자식의 값을 다 null값으로 바꾸고 부모를 죽음  
 
 
 

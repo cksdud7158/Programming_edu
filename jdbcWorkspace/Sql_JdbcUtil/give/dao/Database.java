@@ -12,20 +12,20 @@ import broker.twotier.exception.DuplicateSSNException;
 import broker.twotier.exception.InvalidTransactionException;
 import broker.twotier.exception.RecordNotFoundException;
 import broker.twotier.vo.CustomerRec;
-import broker.twotier.vo.ShresRec;
+import broker.twotier.vo.SharesRec;
 import broker.twotier.vo.StockRec;
 import config.ServerInfo;
 
 public class Database implements DatabaseTemplate{
 	
 	public Database(String serverIp) throws ClassNotFoundException{
-		Class.forName(ServerInfo.DRIVE_NAME);
+		Class.forName(ServerInfo.DRIVER_NAME);
 		System.out.println("드라이버 로딩 성공....");
 	}
 	//공통적인 로직....
 	@Override
 	public Connection getConnect() throws SQLException {
-		Connection conn =DriverManager.getConnection(ServerInfo.URL, ServerInfo.USER, ServerInfo.PASSWORD);
+		Connection conn =DriverManager.getConnection(ServerInfo.URL, ServerInfo.USER, ServerInfo.PASS);
 		System.out.println("Database Connection......");
 		return conn;
 	}
@@ -117,11 +117,11 @@ public class Database implements DatabaseTemplate{
 	}
 
 	@Override
-	public Vector<ShresRec> getPortfolio(String ssn) throws SQLException {
+	public Vector<SharesRec> getPortfolio(String ssn) throws SQLException {
 		 Connection conn = null;
 		 PreparedStatement ps = null;	
 		 ResultSet rs = null;
-		 Vector<ShresRec> v = new Vector<ShresRec>();
+		 Vector<SharesRec> v = new Vector<SharesRec>();
 		 try{
 			 conn = getConnect();
 			 String query = "SELECT ssn, symbol, quantity FROM shares WHERE ssn=?";
@@ -129,7 +129,7 @@ public class Database implements DatabaseTemplate{
 			 ps.setString(1,ssn);
 			 rs = ps.executeQuery();
 			 while(rs.next()){
-				 v.add(new ShresRec(ssn, 
+				 v.add(new SharesRec(ssn, 
 						 			rs.getString("symbol"), 
 						 			rs.getInt("quantity")));
 			 }			 
