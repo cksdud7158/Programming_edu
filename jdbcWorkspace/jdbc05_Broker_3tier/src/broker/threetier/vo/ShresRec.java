@@ -1,4 +1,7 @@
 package broker.threetier.vo;
+
+import java.io.Serializable;
+
 /*
  * 누가 
  * 어떤 주식을 
@@ -6,7 +9,7 @@ package broker.threetier.vo;
  * Shares 테이블의 정보
  * 
  */
-public class ShresRec {
+public class ShresRec implements Serializable {
 	private String ssn;
 	private String symbol;
 	private int qunatity;

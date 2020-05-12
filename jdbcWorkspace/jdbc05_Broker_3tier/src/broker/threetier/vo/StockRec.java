@@ -1,9 +1,12 @@
 package broker.threetier.vo;
+
+import java.io.Serializable;
+
 /*
  * Stock 테이블의 정보를 저장하는 클래스
  * 주식의 이름, 주식의 가격으로 구성된다. 
  */
-public class StockRec {
+public class StockRec implements Serializable {
 	private String symbol;
 	private float price;
 	

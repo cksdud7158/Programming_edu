@@ -1,8 +1,9 @@
 package broker.threetier.vo;
 
+import java.io.Serializable;
 import java.util.Vector;
 
-public class CustomerRec {
+public class CustomerRec implements Serializable {
 	private String ssn;
 	private String name;
 	private String address;
