@@ -631,11 +631,18 @@ avg(sal) over(partition by job) 업무별_평균급여,
 max(sal) over(partition by job) 업무별_최대급여
 from emp;
 
+create table encore(no int primary key auto_increment, name varchar(30));
+desc encore;
+insert into encore values('박찬영'); --  이렇게 쓰면 안됨
+insert into encore(name) values('설경구');
+select * from encore;
+delete from encore where no =3;
+drop table encore;
 
-
-
-
-
+create table bank(id varchar(20) primary key, name varchar(30), bankname varchar(30), balance int(10));
+desc bank;
+insert into bank(id, name, bankname, balance) values('111', '윤아', '신한은행', 1000000);
+insert into bank(id, name, bankname, balance) values('222', '승기', '국민은행', 2000000);
 
 
 
