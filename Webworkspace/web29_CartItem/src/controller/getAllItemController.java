@@ -1,0 +1,37 @@
+package controller;
+
+import java.util.ArrayList;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import model.Item;
+import model.ItemDAO;
+
+public class getAllItemController implements Controller {
+
+	@Override
+	public ModelAndView handle(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		String path ="itemList.jsp";
+		ArrayList<String> fruits = new ArrayList<>();
+		
+		//브라우저의 모든 쿠키를 정보를 받아오는 로직
+		Cookie[ ] cs= request.getCookies();
+		if(cs!=null) {
+			for(Cookie c :cs) {
+				if(c.getName().startsWith("fruitshop")) {
+					fruits.add(c.getValue());
+				}
+			}
+		}
+		
+		request.setAttribute("fruits", fruits);
+		
+		ArrayList<Item> list = ItemDAO.getInstance().getAllItem();
+		request.setAttribute("list", list);
+		
+		return new ModelAndView(path);
+	}
+
+}

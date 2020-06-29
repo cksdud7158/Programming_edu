@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>front_workshop1</title>
+	<style>
+		header{
+			color : orange;
+			font-size: 50px;
+			text-shadow : 4px 2px 2px black;
+			text-align: center;
+		}
+		hr{
+			border:5px solid orange;
+		}
+		form{
+			width: 70%;
+			margin:0 auto;
+		}
+		selection.a{
+			margin:0 auto;
+		}
+	
+		
+	</style>
+
+</head>
+<body>
+	<header>Become a Member</header>
+	<hr>
+
+	<form action ="#" >
+		<fieldset>
+			<legend><h1>Registration Information</h1></legend>
+			<selection class= "a">
+				<p> E-mail: <input type="email" name="email" required="required" margin="0 auto" ></p>
+				<p> Password: <input type="password" name="password" placeholder="At least 6 letters or numbers" maxlength="6" required="required"></p>
+				<p> Verify Password: <input type="password" name="password" maxlength="6" required="required"></p>
+			</selection>
+		</fieldset>
+		<fieldset>
+			<legend><h1>Member Information</h1></legend>
+			<selection>
+				<p> First Name: <input type="text" name="firstName" required="required" ></p>
+				<p> Last Name: <input type="text" name="lastName" required="required" ></p>
+					<article>
+					<p> Address: <input type="text" name="address" ></p>
+					</article>
+				<p> City: <input type="text" name="city" required="required"></p>
+				<p> State: <input type="text[numberOnly]" name="state" placeholder="2-character code" maxlength="2" required="required" ></p>
+				<p> ZIP Code: <input type="text[numberOnly]" name="zipCode" placeholder="5 or 9 digits" maxlength="10" required="required" ></p>
+					<article></article>
+					<p> Phone Number: <input type="text" name="phoneNumber" placeholder="999-999-9999" maxlength="12" ></p>
+					</article>
+			</selection>
+		</fieldset>
+		<fieldset>
+			<legend><h1>Member Information</h1></legend>
+			<span>Membership Type: </span>
+			<selection>
+				<select name = "membershipType">
+				<p>Membership Type<option value="Junior">Junior</option></p>
+				<p>Membership Type<option value="senior">Senior</option></p>
+				</select>
+				<p>Starting Date: <input type="date" name = "date" required="required"> </p>
+				<p>Ticket For Guests: <input type="number" name = "ticketForFuests" onfocus="this.value='2'" min="2" max ="2"> </p>
+				
+			</selection>
+		</fieldset>
+		<fieldset>
+			<legend><h1>Submit Your Membership</h1></legend>
+			<input type="submit" value="Submit"> 
+			<input type="reset" value="Reset Fields"> 
+		</fieldset>	
+	</form>
+	<hr>
+</body>
+</html>

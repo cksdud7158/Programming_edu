@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 500px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        div {
+            height: 300px;
+            border: 1px solid black;
+            margin-top: 80px;
+            border-top-width: 1px;
+            padding-top: 60px;
+            box-sizing: border-box;
+        }
+
+        img {
+            float: left;
+            background-color: red;
+        }
+
+        span {
+            padding-left: 70px;
+        }
+
+        input[type=submit] {
+            color: white;
+            background: greenyellow;
+        }
+
+        hr {
+            border-style: dotted;
+            width: 230px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    </style>
+    <script type="text/javascript">
+	   function checkLogin() {
+		var loginForm = document.login;
+		var id= loginForm.id.value;
+		var pass = loginForm.password.value;
+		
+		if(!id || !pass){
+			alert("아이디와 비밀번호를 모두 입력해주세요");
+		}else{
+			loginForm.submit();
+		}
+	}
+    </script>
+</head>
+
+<body>
+    <div>
+        <img src="1.png">
+        <h1>로그인하여 주세요 </h1>
+        <form action="LOGIN" name="login" method="post">
+            <span>ID </span><input type="text" name="id"><br /><br />
+            PASSWORD <input type="password" name="password">
+            <hr>
+            <input type="button" value="LOGIN" onclick="checkLogin()">
+    </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body{
+		width: 900px;
+		margin:0 auto;
+	}
+	header{
+		font-size: 40px;
+		font-stretch: ultra-expanded;
+	}
+	img{
+		width: 380px;
+		height: 400px;
+	}
+
+	input[type=checkbox]{
+		display: inline;
+	}
+	fieldset.timeset{
+		width: 500px;
+	}
+	
+	fieldset.checkbox{
+		width: 500px;
+	}
+	
+</style>
+</head>
+<body>
+<header>Encore Theater</header>
+<div>
+	<h1>쿵푸팬더 예매</h1>
+	<img alt="쿵푸팬더 포스터" src="img/panda.jpg">
+	<br>
+	<form action="#">
+
+	<span>상영관</span>
+	<select>
+	<option value="cgv">CGV</option>
+	<option value="megabox">메가박스</option>
+	</select>
+	<span>날짜선택 <input type="date" name="date" ></span>
+
+	<fieldset class="timeset">
+		<legend>시간 선택</legend>
+		<input type="radio" id="0830" name="time" value="0830"><label for="0830">08:30</label>
+		<input type="radio" id="1100" name="time" value="1100"><label for="1100">11:00</label>
+		<input type="radio" id="1420" name="time" value="1420"><label for="1420">14:20</label>
+		<input type="radio" id="1725" name="time" value="1725"><label for="1725">17:25</label>
+		<input type="radio" id="2010" name="time" value="2010"><label for="2010">20:10</label>
+		<input type="radio" id="2305" name="time" value="2305"><label for="2305">23:05</label>		
+	</fieldset>
+	<span>요금</span> 
+	<strike>￦9,000</strike> &nbsp &nbsp  <u>￦5,000</u>
+	<p>인원 <input type="number" value="0"> </p>
+	<p>금액 <input type="number" value="0"> </p>
+	<p><input type="checkbox" name ="checkbox" value="Yes" checked="checked" >옵션</p>
+	
+	<fieldset class="checkbox">
+	<span><input type="checkbox" name ="checkbox" value="popcone"  >팝콘</span>
+	<span><input type="checkbox" name ="checkbox" value="coke"  >콜라</span>
+	</fieldset>
+	</form>
+	
+	
+</div>
+</body>
+</html>

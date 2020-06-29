@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// h1, p 태그를 한꺼번에 선택자로 지정
+		$('h1, p').css('color', 'orange');
+		// div 태그의 자식인 p 태그를 선택자로 지
+		$('div p').css('color','red');
+		// 3개의 p 태그 중에서 첫번째 p 태그를 선택자로 지정 
+		//$('p:first').css('background','gray');
+		//$('p').first().css('background','gray');
+		//$('p:last').css('background','yellow');
+		$('p:eq(0)').css('background','gray');
+		//$('p#paragraph').css('border','1px solid green');
+		//$('p #paragraph').css('border','1px solid green'); //p 태그의 아래 자식중에 id 가 있는 애 
+		$('p.statement').css('border','1px solid blue');
+		$('p.item').css('color','blue');
+	})
+
+</script>
+</head>
+<body>
+	<h1>what is j query</h1>
+	<div>
+	<p>Get th element with the class 'continue' and change its HTML to 'Next Step...'</p>
+	</div>
+	<p id="paragraph">Get th element with the class 'continue' and change its HTML to 'Next Step...'</p>
+	<p class="statement">Get th element with the class 'continue' and change its HTML to 'Next Step...'</p>
+	<p class="statement item">Get th element with the class 'continue' and change its HTML to 'Next Step...'</p>
+
+</body>
+</html>

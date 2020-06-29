@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.img{ width : 20%;}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 각각의 이미징에 마우스를 갖다대면 현재 크기보다  2배 커지고 이미지에서 마우스가 벗어나면 원래 크기를 되찾도록
+		$('img').hover(function() {
+			$(this).addClass('img');
+		}, function() {
+			$(this).removeClass('img')
+		})
+		
+	})
+
+</script>
+</head>
+<body>
+	<h2>bigger Image</h2>
+	<img alt="" src="../image/1.JPG" width="100"><br/>
+	<img alt="" src="../image/2.JPG" width="100"><br/>
+	<img alt="" src="../image/3.JPG" width="100"><br/>
+</body>
+</html>

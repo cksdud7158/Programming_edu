@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> hover() :: 두가지 마우스 이벤트( mouseenter + mouseleave)를 이미 가지고 있는 기능</title>
+<style type="text/css">
+	.reverse{ background: blue; color: white;}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('h2').hover(function() {
+			$(this).addClass('reverse')
+		}, function() {
+			$(this).removeClass('reverse')
+		})// hover()
+		
+	}) //function
+
+</script>
+</head>
+<body>
+	<h2> 오늘은 화요일 입니다.</h2>
+	<h2> 오후 늦게 비가 온다는 예보입니다.</h2>
+	<h2> 퇴근하실 때 비가 올 수 잇습니다. 우산들 가지고오셨나요?</h2>
+</body>
+</html>

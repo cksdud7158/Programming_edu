@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var numbers;
+	var count=0;
+	function startGame() {
+		numbers= selectNumber();
+		intervalId = setInterval(displayNumber,1000);
+	}
+	
+	function selectNumber() {
+		var numbers= new Array(6);
+		var generateRandom = function (min, max) {
+			  var ranNum = Math.floor(Math.random()*(max-min+1)) + min;
+			  return ranNum;
+		
+		// 로직
+		for(var i=0;i<6;i++){
+			numbers[i] = generateRandom(1, 45);
+		}
+	}
+		
+	function displayNumber() {
+		//append()를 이용해서 numbers 안에 들어있는 숫자를 result 영역에 붙여나간다.
+		//만약에 count가 6이되면 intervalID를 멈춘다.
+		
+		clearInterval(intervalId)
+	}
+	window.onload = startGame;
+	
+	
+	var numbers= new Array(6);
+
+	var generateRandom = function (min, max) {
+		  var ranNum = Math.floor(Math.random()*(max-min+1)) + min;
+		  return ranNum;
+		}
+	// 로직
+	for(var i=0;i<6;i++){
+		numbers[i] = generateRandom(1, 45);
+		document.write(numbers[i]+"<br>");
+	}
+</script>
+</head>
+<body>
+	<h3>대박을 기원합니다~~~</h3>
+	<div id="result>
+		
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

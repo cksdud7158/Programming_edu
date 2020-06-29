@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>addClass() :: html 코드와 css 코드를 분리 </title>
+<style type="text/css">
+	.totalView{ color:orange}
+	.divP{color: red}
+	.pFirst{background: maroon}
+	.paragraph{border: 1px solid fuchsia}
+	.statement{border: 1px solid blue}
+	.item{border: 1px solid black}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('h1, p').addClass('totalView');
+		$('div p').addClass('divP');
+		$('p:eq(0)').addClass('pFirst');
+		$('p#paragraph').addClass('paragraph');
+		$('p.statement').addClass('statement');
+		$('p.item').addClass('item');
+		
+	})
+
+</script>
+</head>
+<body>
+	<h1>what is j query</h1>
+		<div>
+			<p>Get th element with the class 'continue' and change its HTML to 'Next Step...'</p>
+		</div>
+		<p id="paragraph">Get th element with the class 'continue' and change its HTML to 'Next Step...'</p>
+		<p class="statement">Get th element with the class 'continue' and change its HTML to 'Next Step...'</p>
+		<p class="statement item">Get th element with the class 'continue' and change its HTML to 'Next Step...'</p>
+
+</body>
+</html>

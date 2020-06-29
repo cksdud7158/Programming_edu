@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	table{border: 3px solid magenta; width: 550px;}
+	tr,th,td{text-align: center; border: 1px dotted blue; font-size: 1.2em}
+	.hover{background: #00f; color: #fff;}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('tbody tr').hover(function() {
+			//$(this).addClass('hover');
+			//현재 이벤트가 적용된 tr 태그중에서 td라는 태그를 발견하면 거기에 addClass를 적용하도록 
+			$(this).find('td').addClass('hover')
+		}, function() {
+			//$(this).removeClass('hover')
+			$(this).find('td').removeClass('hover')
+		})
+		
+	})
+
+</script>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>이 름 </th><th>직 업 </th><th>주 소 </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>아이유 </td><td>가수 </td><td>여의도 </td>
+			</tr>	
+			<tr>
+				<td>이나영 </td><td>배우 </td><td>금천구 </td>
+			</tr>	
+			<tr>
+				<td>한가인 </td><td>이쁜애</td><td>사가정 </td>
+			</tr>	
+			<tr>
+				<td>권미수</td><td>세젤예 </td><td>사가정 </td>
+			</tr>	
+		</tbody>
+	
+	</table>
+
+</body>
+</html>

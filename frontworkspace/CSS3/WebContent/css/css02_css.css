@@ -1,0 +1,16 @@
+h2{
+		color: orange;
+		font-style: oblique;
+		font-weight: bold;
+		font-size: 25pt;
+	}
+	/* p 태그를 선택자로 지정...글씨색깔.font-size: 25pt; 궁서체(?)  */
+p{
+		font-size: 25pt;
+		color: purple;
+		font-family: cursive;
+	}
+	/* 내가한 css  */
+	body {
+		background: gray;
+	}

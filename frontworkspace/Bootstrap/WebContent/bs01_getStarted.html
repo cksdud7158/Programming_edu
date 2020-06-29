@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <!-- 
+  	width=device-width : 페이지의 너비를  기기의 스크린 너비로 조정
+  	initial-scale : 처음페이지 로딩할 때 확대 축소가 되지않은 원래 크기로 조정...0~1
+   -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> <!-- css -->
+  <!--
+  	JQuert 라이브러리를 가지고 bootstrap 라이브러리를 만든것이다. 따라서 아래의 순서로 호출해야함 *** 
+   -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- JQuery Cdn -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> <!-- Bootstrap 라이브러리 -->
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+  <!-- 
+  	부트스트랩 그리드 ... grid
+  	한줄은 기본적으로 12개의 구성되어져있다는 맥락 
+  	예를 들어 정확히 한줄을 3등분 하고 싶으면 
+  	-> <div class="col-sm-4">
+  	디바이스 크기 
+  	가장 작은 크기는(모바일)- 768px  XS
+  	중간 크기는 ( 태블릿) - 768보다 큼	SM
+  	중상 크기 (노트북)	- 992px	MD
+  	가장 큰 크기(데스크탑)	- 1200px	LG
+   -->
+<div class="container">
+  <div class="row">
+    <!-- <div class="col-lg-4">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-lg-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-lg-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div> -->
+    
+    <div class="col-sm-6">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-6">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-6">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    
+  </div>
+</div>
+
+</body>
+</html>

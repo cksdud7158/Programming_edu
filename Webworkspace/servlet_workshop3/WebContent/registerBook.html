@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>도서등록 페이지 </h2>
+	<form action="RegisterBook">
+		<p>
+		도서번호 : <input type="text" maxlength="3" id="bookNum" name="bookNum">
+				<input type="text" maxlength="3" id="bookNum" name="bookNum">
+				<input type="text" maxlength="6" id="bookNum" name="bookNum">
+		</p>
+		도서 이름 : <input type="text" name="bookNameh"><p>
+		도서 종류 : 
+		<select name="bookCategory">
+			<option value="소설">소설</option>
+			<option value="자기계발">자기계발</option>
+			<option value="프로그래밍">프로그래밍</option>
+		</select><p>
+		출판 국가 : <input type="text" name="publishingCountry"><p>
+		출판일 : <input type="text" name="publishingDate"><p>
+		출판사 : <input type="text" name="publishingDate"><p>
+		작가 : <input type="text" name="author"><p>
+		가격 : <input type="number" name="bookPrice">원<p>
+		요약 : <textarea rows="5" cols="20" name= "summaryContext"></textarea>
+		<input type="submit" value="전송">
+	</form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!-- 
+	table 태그 안에 자식 th를 의미
+	직계뿐만 아니라 자손도 다 가능
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table에 hover 효과주기 </title>
+<style type="text/css">
+	table{
+		width: 60%;
+		border-top : 1px solid red; 
+		border-bottom: 1px solid red; 
+	}
+	
+	table th{
+		background-color: red;
+		color: ffff;
+		border-bottom: 2px solid red;
+	}
+/* 
+	tr의 직계자식인 td를 선택자로 지정 
+	border의 하단을 2px 점선 분홍색으로 스타일 
+*/
+	tr td{
+		border-bottom: 2px dotted blue;
+		text-align: center;
+	}
+/*
+	table의 자식인 tr을 선택자로 지정
+ */
+	 table tr:hover{
+	 	background-color: pink;
+	 }
+
+</style>
+
+</head>
+<body>
+	<h2 align= "center">Table에 Hover 효과 </h2>
+	<table align ="center" >
+		<tr>
+			<th>이 름 </th><th>주 소</th><th>주 소</th> 
+		</tr>
+		<tr>
+			<td>이태오</td><td>여의도</td> <td>기회자</td>
+		</tr>
+		<tr>
+			<td>지선우</td><td>고산시</td> <td>의사</td>
+		</tr>
+		<tr>
+			<td>김선생</td><td>고산시</td> <td>의사</td>
+		</tr>
+	</table>
+</body>
+</html>

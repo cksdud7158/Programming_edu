@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		/* $('#addOptionBtn').on('click', function() {
+			var arr= ['하경','재은','해경','은책','미경','연희','소희'];
+			
+			//1. each() 상용해서 배열안의 친구들의 이름을 select>option 만들어서 붙임 ..append()
+			$(arr).each(function(index) {
+				var option= '<option value='+ arr[index]+'>'+arr[index]+'</option>'
+				$('#friend').append(option);
+			})//each
+			$(this).unbind(); // 추가 생성 블락
+		})//click */
+		
+		/* $('#addOptionBtn').one('click', function() {
+			var arr= ['하경','재은','해경','은책','미경','연희','소희'];
+			
+			//1. each() 상용해서 배열안의 친구들의 이름을 select>option 만들어서 붙임 ..append()
+			$(arr).each(function(index) {
+				var option= '<option value='+ arr[index]+'>'+arr[index]+'</option>'
+				$('#friend').append(option);
+			})//each
+		})//click */
+		
+		$('#addOptionBtn').one('click', function() {
+			var arr= ['하경','재은','해경','은책','미경','연희','소희'];
+			
+			//1. each() 상용해서 배열안의 친구들의 이름을 select>option 만들어서 붙임 ..append()
+			$(arr).each(function(index,item) {
+				var option= '<option value='+ item+'>'+item+'</option>'
+				$('#friend').append(option);
+			})//each
+			// 3. 생성된 폼을 제거 
+			$('#deleteOptionBtn').click(function() {
+				$('#friend>option').remove();
+			})
+		})//click
+		
+	})//function
+
+</script>
+</head>
+<body>
+	<input type="button" value="옵션생성" id="addOptionBtn">
+	<input type="button" value="옵션삭제" id="deleteOptionBtn">
+	<select id="friend"></select>
+</body>
+</html>

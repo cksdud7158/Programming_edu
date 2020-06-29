@@ -1,0 +1,87 @@
+<!--  
+	모든 입력 폼을 하나로 묶는 역할을 하는 태그 
+	form 태그이다.
+	이안에 넣을 수 있는 다양한 입력폼들을 사용해 보겠다.
+	속성
+	1) 필수 --- action ="서버안에 있는 페이지"
+	2) 옵셔널 -- method
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Input type</title>
+<style type="text/css">
+	#wrap {
+		margin-left: 20%;
+		margin-top: 10%;
+	}
+	
+/* id값을 표시할 떈 앞에 # 붙이기 */
+</style>
+
+</head>
+<body>
+<h2 align="center"> Register Input Form</h2>
+	<div id="wrap">
+	<form action="#">
+		NAME  &nbsp; &nbsp;<input type="text" name ="name" placeholder="이름입력"><br><br>
+		ID &nbsp; &nbsp;<input type="text" name ="id" value="encore" readonly="readonly"><br><br>
+		PASSWORD &nbsp; &nbsp;<input type="password" name ="password"><br><br>
+		
+		<input type="file" name= "userfile"><br><br>
+		BirthDate <input type="date" name='birthdate' id="birthdate"><br><br>
+		Gender<input type="radio" name="gender" value="M">남성
+			  <input type="radio" name="gender" value="F">여성<br><br>
+			  
+		Age <input type="number" name="age" required="required" min="0" max="90"><br><br>
+		
+
+		Weight <input type="range" name="weight" required="required" min="0" max="90" step="10"><br><br>
+		
+		<strong>다음 중 오늘 드시고 싶은 점심 메뉴들을 선택하세요 </strong><br><br>
+		<select multiple="multiple">
+			<option>김밥
+			<option>돈까스
+			<option>알밥
+			<option>모밀국수
+		</select><br><br>
+		
+		<strong>다음 중 오늘 드시고 싶은 점심 메뉴들을 선택하세요 </strong><br><br><!--  multiple한  Choice : checkbox -->
+		<input type="checkbox" name ="pets" value="게">개
+		<input type="checkbox" name ="pets" value="고양이">고양이
+		<input type="checkbox" name ="pets" value="햄스터">햄스터
+		<br><br>
+		Introduction<br>
+		<textarea rows="5" cols="40">
+		Hi
+		
+		</textarea>
+		<hr>
+		<br><br>
+		<input type="submit" value="Sending">
+		<input type="reset"	 value="Clear">
+		<input type="button" value="Button">
+	</form>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

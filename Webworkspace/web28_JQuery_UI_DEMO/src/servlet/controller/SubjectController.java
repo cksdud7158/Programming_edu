@@ -1,0 +1,19 @@
+package servlet.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class SubjectController implements Controller {
+
+	@Override
+	public ModelAndView handle(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		System.out.println("getSubjectController...진입 ");
+		//비즈니스 로직 호출 결과값 리턴 받았다 치고 
+		String result = "AI | Big Data | Deep Learning";
+		
+		request.setAttribute("result", result);
+		return new ModelAndView("Result.jsp");
+	}
+
+}

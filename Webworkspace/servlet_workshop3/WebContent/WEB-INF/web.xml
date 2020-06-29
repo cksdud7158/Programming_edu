@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>servlet.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>servlet.controller.LoginServlet</servlet-class>
+    <init-param>
+      <description></description>
+      <param-name>path</param-name>
+      <param-value>C:\pcy\apache-tomcat-8.5.55\webapps\servlet_workshop3\userInfo.txt</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RegisterBook</display-name>
+    <servlet-name>RegisterBook</servlet-name>
+    <servlet-class>servlet.controller.RegisterBook</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterBook</servlet-name>
+    <url-pattern>/RegisterBook</url-pattern>
+  </servlet-mapping>
+</web-app>

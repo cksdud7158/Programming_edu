@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function selectLine() {
+		/* var sub= document.subwayFrm.line; */
+		var sub= document.getElementById("sline");
+		if(sub.value!= null){
+			alert(sub.value+" 호선!!");
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="subwayFrm">
+	<!-- onclick는 클릭되자마자 전송 따라서 select에서 사용 안함  -->
+		<select name= "line" onchange="selectLine()" id="sline">
+		 <!-- value를 전달할 필요가 없음. radio 나 checkbox는 value가 전달되나 option은 다름 -->
+			<option value="">----호선----</option> <!-- default값을 넣어놔도 좋음   -->
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+		</select>
+	</form>
+
+</body>
+</html>

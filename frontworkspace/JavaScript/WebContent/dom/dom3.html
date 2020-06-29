@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+	/* 	
+		1//바디의 특정 태그를 가져와 내용을 수정
+		var header1 = document.getElementById("header1");
+		var header2 = document.getElementById("header2");
+		
+		header1.innerHTML = '<H2><font color=red>Using getElementById</H2>'
+	
+	*/
+	//2.
+	var headers = document.getElementsByTagName('h1') //name = 태그명
+	alert(headers.length);
+	}	
+</script>
+</head>
+<body>
+	<h1 id="header1">Header--1</h1>
+	<h1 id="header2">Header--2</h1>
+
+</body>
+</html>

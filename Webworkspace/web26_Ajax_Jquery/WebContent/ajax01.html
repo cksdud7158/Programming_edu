@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script >
+	$(function() {
+		$('#ajaxbtn').click(function() {
+			var id = $('#id').val();
+			var pass = $('#pass').val();
+			//비동기 시작됨
+			$.ajax({
+				//요청 
+				type: "post",
+				url: "JQueryAjax",
+				data: "id="+id+"&&pass="+pass,
+				
+				//응답
+				success:function(data){
+					$('#resultView').html(data).css({
+						'background': 'yellow',
+						'color' : 'red'
+					})
+				}//callback
+			})//ajax
+		}); //click
+	}); //ready
+	
+
+
+</script>
+</head>
+<body>
+	<h2> Ajax using Jquery</h2>
+		id <input type="text" name= "userID" id="id"><br/><br/>
+		pass <input type="password" name= "userPass" id="pass"><br/><br/>
+		<input type="button" value="ajaxbtn" id="ajaxbtn">
+		<sapn id="resultView"></sapn>
+
+</body>
+</html>

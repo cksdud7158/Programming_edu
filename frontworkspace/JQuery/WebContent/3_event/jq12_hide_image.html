@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지 숨기기 hide() || 이미지 보이기 show()</title>
+<style type="text/css">
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//1. 이미지를 숨기긴다. 
+		$('#imageView').hide(); 
+		$('#mouseIn').css('background', 'yellow')
+		
+		/* //2.
+		$('#mouseIn').mouseenter(function() {
+			//$('#imageView').show(3000);
+			//$('#imageView').show(slow);
+			$('#imageView').fadeIn(3000);
+		}); */
+		
+		/* $('#mouseIn').mouseleave(function() {
+			//$('#imageView').hide(3000);
+			$('#imageView').fadeOut(2000);
+		}); */
+		
+		$('#mouseIn').hover(function() {
+			$('#imageView').show(3000);
+		},function() {
+			$('#imageView').hide(3000);
+		})
+	});
+
+</script>
+</head>
+<body>
+	<h2 id="mouseIn">+++++++++++++사진 보기++++++++++</h2>
+	<div id="imageView"><img alt="" src="../image/1.JPG" width="300" height="400"></div>
+</body>
+</html>
+
+
+
+<!--  
+	val()
+	html(), text()
+	setTimeout(function(){
+	
+	})
+	setInterval(function(){
+	
+	})
+	bind(), click(), hover(), each() 
+	unbind()
+	hide(3000), show('fast), fadeOut(), fadeIn()
+	find() -> 특정한 함수가 있는지 찾을 때 사용
+	addClass(), removeClass(), css() 
+	mouseenter(), mouseleave()
+ -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

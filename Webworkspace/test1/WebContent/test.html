@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>도서등록 페이지 </h2>
+		<form action="RegisterBookServlet" method="post">
+			도서번호 : <input type="text" maxlength="3" id="isbn" name="isbn" required="required">
+					<input type="text" maxlength="3" id="isbn" name="isbn" required="required">
+					<input type="text" maxlength="6" id="isbn" name="isbn" required="required">
+			</p>
+			도서 제목 : <input type="text" name="title" required="required"><p>
+			도서 종류 : 
+			<select name="catalogue" required="required">
+				<option value="소설">소설</option>
+				<option value="자기계발">자기계발</option>
+				<option value="프로그래밍">프로그래밍</option>
+			</select><p>
+			출판 국가 : <input type="text" name="nation"><p>
+			출판일 : <input type="text" name="publish_date"><p>
+			출판사 : <input type="text" name="publisher"><p>
+			저자 : <input type="text" name="author" required="required"><p>
+			가격 : <input type="number" name="price">원<p>
+			요약 : <textarea rows="5" cols="20" name= "description"></textarea>
+			<input type="submit" value="전송">
+		</form>
+</body>
+</html>
