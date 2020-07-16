@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Playdata\Downloads\AmusementParkProject514\AmusementParkProject"/>
+			<item value="C:\Users\Playdata\Downloads\AmusementParkProject515\AmusementParkProject"/>
+			<item value="C:\Users\Playdata\Downloads\AmusementParkProject516\AmusementParkProject"/>
+			<item value="\\192.168.0.44\AmusementParkProject"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>
