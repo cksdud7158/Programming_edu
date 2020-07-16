@@ -1,0 +1,97 @@
+select * from person;
+-- Person 엔터티 추가
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, isolation, country)
+VALUES(111, '김00', '서울', '서초구', 30, 'w', '2020-05-10', '2020-05-10', "대한민국");
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, isolation, country)
+VALUES(222, '이00', '서울', '강남구', 28, 'm', '2020-04-07', '2020-04-08', "대한민국");
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, isolation, country)
+VALUES(333, '박00', '서울', '서초구', 80, 'm', '2020-03-10', '2020-03-10', "미국");
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, isolation, country)
+VALUES(444, '최00', '경기도', '시흥시', 47, 'w', '2020-04-22', '2020-04-22', "미국");
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, intecter, isolation, country)
+VALUES(555, '한00', '경기도', '부천시', 16, 'm', '2020-05-10', 111, '2020-05-11', "대한민국");
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, isolation, country)
+VALUES(666, '진00', '인천', '부평구', 59, 'm', '2020-05-05', '2020-05-05', "대한민국");
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, isolation, country)
+VALUES(777, '유00', '인천', '계양구', 22, 'm', '2020-02-10', '2020-02-10', "독일");
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, isolation, country)
+VALUES(888, '강00', '울산', '중구', 21, 'w', '2020-01-29', '2020-01-29', "대한민국");
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, isolation, country)
+VALUES(999, '전00', '울산', '울주군', 47, 'w', '2020-02-22', '2020-02-23', "대한민국");
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, isolation, country)
+VALUES(1010, '김00', '부산', '연제구', 33, 'm', '2020-03-30', '2020-03-31', "캐나다");
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, isolation, country)
+VALUES(1111, '피00', '대구', '수성구', 28, 'w', '2020-04-02', '2020-04-02', "대한민국");
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, intecter, isolation, country)
+VALUES(1212, '방00', '대전', '중구', 25, 'm', '2020-05-14', 111, '2020-05-15', "대한민국");
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, intecter, isolation, country)
+VALUES(1313, '나00', '강원도', '원주시', 77, 'm', '2020-05-14', 1212, '2020-05-14', "싱가폴");
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, intecter, isolation, country)
+VALUES(1414, '기00', '경상남도', '마산시', 96, 'w', '2020-05-18', 111, '2020-05-19', "대한민국");
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, intecter, isolation, country)
+VALUES(1515, '라00', '경상북도', '영주시', 55, 'w', '2020-05-18', 1212, '2020-05-18', "대한민국");
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, intecter, isolation, country)
+VALUES(1616, '지00', '전라남도', '여수시', 39, 'm', '2020-05-19', 1212, '2020-05-19', "영국");
+INSERT person(ssn, name, address1, address2, age, gender, test_condition, intecter, isolation, country)
+VALUES(1717, '하00', '전라북도', '전주시', 41, 'w', '2020-05-19', 1212, '2020-05-20', "대한민국");
+select * from hospital;
+INSERT hospital(code, name) VALUES(101, '신촌세브란스');
+INSERT hospital(code, name) VALUES(102, '서울대학병원');
+INSERT hospital(code, name) VALUES(201, '가천길병원');
+INSERT hospital(code, name) VALUES(301, '충북백병원');
+INSERT hospital(code, name) VALUES(401, '충남병원');
+INSERT hospital(code, name) VALUES(603, '전북병원');
+INSERT hospital(code, name) VALUES(703, '전북병원');
+INSERT hospital(code, name) VALUES(801, '경북병원');
+INSERT hospital(code, name) VALUES(901, '경남병원');
+INSERT hospital(code, name) VALUES(891, '대구병원');
+
+select * from place;
+-- Place 엔터티 추가
+INSERT INTO place(address, name) VALUES('111번지', '떡볶이집');
+INSERT INTO place(address, name) VALUES('222번지', '레스토랑');
+INSERT INTO place(address, name) VALUES('333번지', '영화관');
+INSERT INTO place(address, name) VALUES('444번지', '지하철');
+INSERT INTO place(address, name) VALUES('555번지', '회사');
+INSERT INTO place(address, name) VALUES('666번지', '클럽');
+INSERT INTO place(address, name) VALUES('777번지', '마트');
+INSERT INTO place(address, name) VALUES('888번지', '백화점');
+INSERT INTO place(address, name) VALUES('999번지', '차량정비소');
+INSERT INTO place(address, name) VALUES('1010번지', '주유소');
+-- Infectee 엔터티 추가
+select * from infectee;
+INSERT infectee(Person_ssn, in_hospital, deathDate, Hospital_code, Infection_Route)
+VALUES(888, '2020-01-31', '2020-02-01', 201, '지역');
+INSERT infectee(Person_ssn, in_hospital, Hospital_code, Infection_Route)
+VALUES(222, '2020-04-15', 901, '해외');
+INSERT infectee(Person_ssn, in_hospital, treatDate, Hospital_code, Infection_Route)
+VALUES(1212, '2020-05-16', '2020-05-30', 101, '지역');
+INSERT infectee(Person_ssn, in_hospital, Hospital_code, Infection_Route)
+VALUES(111, '2020-05-18', 703, '지역');
+INSERT infectee(Person_ssn, in_hospital, Hospital_code, Infection_Route)
+VALUES(333, '2020-05-18', 901, '해외');
+-- Visits 엔터티 추가
+INSERT visits(infectee_num, address, visitDate)
+VALUES((SELECT infectee_num FROM infectee WHERE Person_ssn = 888), '111번지', '2020-02-01');
+INSERT visits(infectee_num, address, visitDate, cleanDate)
+VALUES((SELECT infectee_num FROM infectee WHERE Person_ssn = 888), '888번지', '2020-01-31', '2020-01-31');
+INSERT visits(infectee_num, address, visitDate, cleanDate)
+VALUES((SELECT infectee_num FROM infectee WHERE Person_ssn = 888), '555번지', '2020-01-31', '2020-01-31');
+INSERT visits(infectee_num, address, visitDate, cleanDate)
+VALUES((SELECT infectee_num FROM infectee WHERE Person_ssn = 222), '555번지', '2020-04-13', '2020-04-14');
+INSERT visits(infectee_num, address, visitDate)
+VALUES((SELECT infectee_num FROM infectee WHERE Person_ssn = 222), '333번지', '2020-04-14');
+INSERT visits(infectee_num, address, visitDate)
+VALUES((SELECT infectee_num FROM infectee WHERE Person_ssn = 111), '444번지', '2020-05-17');
+INSERT visits(infectee_num, address, visitDate, cleanDate)
+VALUES((SELECT infectee_num FROM infectee WHERE Person_ssn = 111), '666번지', '2020-05-16', '2020-05-18');
+INSERT visits(infectee_num, address, visitDate, cleanDate)
+VALUES((SELECT infectee_num FROM infectee WHERE Person_ssn = 111), '555번지', '2020-05-17', '2020-05-17');
+INSERT visits(infectee_num, address, visitDate, cleanDate)
+VALUES((SELECT infectee_num FROM infectee WHERE Person_ssn = 1212), '222번지', '2020-05-15', '2020-05-16');
+INSERT visits(infectee_num, address, visitDate)
+VALUES((SELECT infectee_num FROM infectee WHERE Person_ssn = 1212), '777번지', '2020-05-16');
+INSERT visits(infectee_num, address, visitDate)
+VALUES((SELECT infectee_num FROM infectee WHERE Person_ssn = 333), '888번지', '2020-05-17');
+INSERT visits(infectee_num, address, visitDate, cleanDate)
+VALUES((SELECT infectee_num FROM infectee WHERE Person_ssn = 333), '999번지', '2020-05-17', '2020-05-18');

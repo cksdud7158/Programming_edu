@@ -41,7 +41,7 @@ public class ServletLifeCycleTest2 extends HttpServlet {
 	}
 	
 	protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("3. service..call by contanier");
+		System.out.println("3. service..call by contanier22");
 		
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();

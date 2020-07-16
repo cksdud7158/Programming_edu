@@ -28,7 +28,7 @@
     <load-on-startup>2</load-on-startup>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ServletLifeCycleTest3</servlet-name>
+    <servlet-name>ServletLifeCycleTest2</servlet-name>
     <url-pattern>/Life2</url-pattern>
   </servlet-mapping>
     <servlet>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.AutoCompleteTextField?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="954.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="364.0" style="-fx-background-color: #ffe0b2;">
+         <children>
+            <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="57.0" layoutY="526.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@3895539931556258249-128.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="37.0" layoutX="104.0" layoutY="527.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@15028084081543238917-128.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="37.0" layoutX="293.0" layoutY="526.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@person.png" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_LEFT" layoutX="157.0" layoutY="14.0" prefHeight="38.0" prefWidth="94.0" text="DATAGRAM">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="28.0" fitWidth="25.0" layoutX="125.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@15837915531543238864-128.png" />
+               </image>
+            </ImageView>
+            <Accordion layoutX="193.0" layoutY="42.0" />
+            <AutoCompleteTextField layoutX="147.0" layoutY="534.0" prefHeight="30.0" prefWidth="132.0" />
+            <ScrollPane layoutX="56.0" layoutY="51.0" prefHeight="460.0" prefWidth="274.0">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="207.0" prefWidth="278.0">
+                     <children>
+                        <Accordion layoutX="38.0" layoutY="38.0" />
+                        <TitledPane animated="false" layoutX="4.0" layoutY="1.0" prefHeight="119.0" prefWidth="248.0" text="김주혁">
+                           <content>
+                              <AnchorPane accessibleHelp="ㄹㅇㄴㅁㄻㄴㅇ" accessibleRoleDescription="ㅇㅁㄴㄻㄴㅇㄻㅇ" accessibleText="ㅇㄴㄻㅇ" minHeight="0.0" minWidth="0.0" prefHeight="115.0" prefWidth="246.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@사진2.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TextArea layoutX="6.0" layoutY="123.0" prefHeight="139.0" prefWidth="250.0" text="likes : 10개&#10;Caption : 한라산에 왔다. 기부니가 좋다.&#10;ㅌ팀원들이 생각나서 태그했다.&#10;#등산 #막걸리각 #내일도쌉가능&#10;people tag : @김주혁 @박찬영 @이미자&#10;Comment:&#10;이치종  :  지렸다&#10;박찬용  : 어디임?&#10;오세훈 : 굿">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </TextArea>
+                        <ImageView fitHeight="19.0" fitWidth="25.0" layoutX="203.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@like.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="19.0" fitWidth="25.0" layoutX="226.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@comment.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <AnchorPane layoutX="54.0" layoutY="261.0" minHeight="0.0" minWidth="0.0" prefHeight="263.0" prefWidth="286.0">
+               <children>
+                  <Accordion layoutX="38.0" layoutY="38.0" />
+                  <TitledPane animated="false" layoutX="4.0" layoutY="54.0" prefHeight="139.0" prefWidth="248.0" text="오세훈">
+                     <content>
+                        <AnchorPane accessibleHelp="ㄹㅇㄴㅁㄻㄴㅇ" accessibleRoleDescription="ㅇㅁㄴㄻㄴㅇㄻㅇ" accessibleText="ㅇㄴㄻㅇ" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="246.0">
+                           <children>
+                              <ImageView fitHeight="95.0" fitWidth="169.0" layoutX="45.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@샘플%20포스트1.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+                  <TextArea layoutX="3.0" layoutY="197.0" prefHeight="30.0" prefWidth="250.0" text="likes : 11110개&#10;Caption : 아까 주혁이가 왔던곳인데 밤이다.&#10;#밤등산 #내일출근 #내일도쌉가능&#10;people tag : @김주혁&#10;Comment:&#10;이치종  :  지렸다&#10;박찬용  : 어디임?&#10;오세훈 : 굿">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
